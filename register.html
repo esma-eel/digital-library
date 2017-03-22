@@ -65,7 +65,8 @@
    				</div>
    			</div>
    			<div class="col-md-6 col-sm-6">
-   				<form action="#" method="post" class="w3-container w3-padding-16">
+   				<form action="register.html" method="post" class="w3-container w3-padding-16" name="regform"
+   				 onSubmit="return formValidate()">
    					<div class="form-group">
    						<label for="username">نام کاربری</label>
    						<input type="text" id="username" name="username" class="form-control" validate>
@@ -87,14 +88,30 @@
    						<br>
    						<label for="emailconfirm">تایید ایمیل</label>
    						<input type="email" id="emailconfirm" name="emailconfirm" class="form-control" validate>
+   						
+   						<div class="alert alert-danger alert-dismissable w3-hide" id="emailwarn">
+   							<a href="#" class="close" data-dismiss="alert" aria-label="close">
+   								&times;
+   							</a>
+   							<strong>هشدار !</strong> فیلد تایید ایمیل با ایمیل یکی نیست.
+   						</div> <!--confirnation alert-->
+   						
    					</div>
    					
    					<div class="form-group">
    						<label for="password">رمز عبور</label>
-   						<input type="password" id="password" name="password" class="form-control" validate>
+   						<input type="password" id="password" name="password" class="form-control" validate min="8">
    						<br>
    						<label for="passwordconfirm">تایید رمز عبور</label>
-   						<input type="password" id="passwordconfirm" name="passwordconfirm" class="form-control" validate>
+   						<input type="password" id="passwordconfirm" name="passwordconfirm" class="form-control" validate min="8">
+   						
+   						<div class="alert alert-danger alert-dismissable w3-hide" id="passwarn">
+   							<a href="#" class="close" data-dismiss="alert" aria-label="close">
+   								&times;
+   							</a>
+   							<strong>هشدار !</strong> فیلد تایید رمز عبور با رمز عبور یکی نیست.
+   						</div> <!--confirnation alert-->
+   						<p id="passwarn2"></p>
    					</div>
    					
    					<div class="form-group">
