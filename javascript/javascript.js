@@ -19,3 +19,23 @@ function formValidate(){
 		return false;
 	}
 }
+
+function validateLogin () {
+	var usr = document.forms["loginf"]["loginusername"].value;
+	var psw = document.forms["loginf"]["loginpassword"].value;
+	
+	if (usr == "" || usr == null) {
+		alert("فیلد نام کاربری خالی است.")
+		return false;
+	}
+	
+	if (psw == "" || psw == null) {
+		alert("فیلد رمز عبور خالی است.")
+		return false;
+	}
+	
+	if (psw.length < 8) {
+		alert("در وارد کردن رمز عبور دقت کنید باید 8 کاراکتر باشد.")
+		return false;
+	}
+}

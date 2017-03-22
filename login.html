@@ -13,16 +13,16 @@
 <body class="my-belize-hole">
 	
    <div class="my-center-div w3-padding-128" style="width: 500px;height: 600px">
-   		<form action="#" method="post" class="w3-center">
+   		<form action="#" method="post" class="w3-center" onSubmit="return validateLogin()" name="loginf">
    			<div class="w3-container w3-padding-16">
    				<h2>کتابخانه دیجیتالی پروا</h2>
    			</div> <!--header of form-->
    			<div class="form-group">
-   				<input type="text" class="form-control" id="username" name="username" placeholder="نام کاربری" validate>
+   				<input type="text" class="form-control" id="loginusername" name="username" placeholder="نام کاربری" validate>
    			</div>
    			<br>
    			<div class="form-group">
-   				<input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور" validate>
+   				<input type="password" class="form-control" id="loginpassword" name="password" placeholder="رمز عبور" validate>
    			</div>
    			
    			<button class="btn my-green-sea w3-hover-shadow btn-block" type="submit">
@@ -31,7 +31,7 @@
    			<br>
    			<div class="checkbox">
    				<label for="rememberme">مرا به خاطر داشته باش</label>
-   				<input type="checkbox" id="rememberme" name="remembermeS">
+   				<input type="checkbox" id="rememberme" name="rememberme">
    			</div>
    			
    			<br><br>
